@@ -7,7 +7,7 @@ from .serializers import *
 
 class PropViewset(viewsets.ModelViewSet):
     serializer_class = PropSerializer
-    queryset = Proposition.objects.all()
+    queryset = Proposition.objects.all().order_by('-id')
 
 
 class UpvoteViewset(viewsets.ModelViewSet):
